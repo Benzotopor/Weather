@@ -12,14 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        view.backgroundColor = .white
+        
+        let acitivityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        view.addSubview(acitivityIndicator)
+        acitivityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        acitivityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        acitivityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        acitivityIndicator.startAnimating()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
