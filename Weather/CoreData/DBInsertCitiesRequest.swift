@@ -43,6 +43,7 @@ class DBInsertCitiesRequest: DBBaseRequest, StorageInsertCitiesRequest {
             
             do {
                 try context.save()
+                self.db.saveChanges()
             } catch {
                 fatalError("context saving error : \(error)")
             }

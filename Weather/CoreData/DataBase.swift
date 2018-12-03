@@ -65,7 +65,7 @@ class CoreDataStorage {
         return moc
     }
     
-    internal func savePrivateContext(completionHandler: (() -> Void)? = nil) {
+    internal func saveChanges(completionHandler: (() -> Void)? = nil) {
         privateManagedObjectContext.perform {
             do {
                 try self.privateManagedObjectContext.save()

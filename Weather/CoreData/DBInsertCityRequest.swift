@@ -43,7 +43,7 @@ class DBInsertCityRequest: DBBaseRequest, StorageInsertCityRequestProtocol {
                     fatalError("error in save context : \(error)")
                 }
                     
-                self.db.savePrivateContext()
+                self.db.saveChanges()
                 
                 context.reset()
             }

@@ -40,7 +40,7 @@ class DBDeleteCityRequest: DBBaseRequest, StorageDeleteCityRequestProtocol {
                     if let record = result.first {
                         context.delete(record)
                         try context.save()
-                        self.db.savePrivateContext()
+                        self.db.saveChanges()
                     }
                     
                 } catch {
